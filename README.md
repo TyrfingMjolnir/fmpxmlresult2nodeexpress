@@ -12,8 +12,37 @@ How to use this file in terminal
 xsltproc fmpxmlresult2nodeexpress.xslt YourTable.fmpxmlresult.xml > route/YourTable.js
 
 ```bash
-$ xsltproc fmpxmlresult2nodeexpress.xslt ../fmpxmlresult2nodeexpress2/test.xml
+$ xsltproc fmpxmlresult2nodeexpress.xslt test.xml
 ```
+
+```xml
+<?xml version="1.0" encoding="UTF-8"?>
+<FMPXMLRESULT xmlns="http://www.filemaker.com/fmpxmlresult">
+<ERRORCODE>0</ERRORCODE>
+<PRODUCT BUILD="07-18-2011" NAME="FileMaker" VERSION="ProAdvanced 11.0v4"/>
+<DATABASE DATEFORMAT="D/m/yyyy" LAYOUT="view" NAME="schema.table" RECORDS="0" TIMEFORMAT="k:mm:ss "/>
+<METADATA>
+  <FIELD EMPTYOK="YES" MAXREPEAT="1" NAME="vintage" TYPE="NUMBER"/>
+  <FIELD EMPTYOK="YES" MAXREPEAT="1" NAME="wine" TYPE="TEXT"/>
+  <FIELD EMPTYOK="YES" MAXREPEAT="1" NAME="wine2" TYPE="TEXT"/>
+</METADATA>
+<RESULTSET FOUND="0">
+  <ROW MODID="0" RECORDID="0">
+    <COL>
+      <DATA>2008</DATA>
+    </COL>
+    <COL>
+      <DATA>Sjattonoeff</DATA>
+    </COL>
+    <COL>
+      <DATA>Sjattonoeff</DATA>
+    </COL>
+  </ROW>
+</RESULTSET>
+</FMPXMLRESULT>
+```
+
+/route/view.js
 
 ```js
 const
