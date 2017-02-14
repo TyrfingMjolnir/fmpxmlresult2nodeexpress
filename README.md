@@ -11,6 +11,40 @@ How to use this file in terminal
 ---
 xsltproc fmpxmlresult2nodeexpress.xslt YourTable.fmpxmlresult.xml > route/YourTable.js
 
+'''bash
+$ xsltproc fmpxmlresult2nodeexpress.xslt ../fmpxmlresult2nodeexpress2/test.xml
+'''
+
+'''js
+const
+  express = require( 'express' ),
+  router  = express.Router();
+
+router.post( '/view/:vintage/:wine/:wine2', function( req, res ) {
+  res.send( req.params.vintage );
+  res.send( req.params.wine );
+  res.send( req.params.wine2 );
+});
+
+router.get( '/view/:vintage/:wine/:wine2', function( req, res ) {
+  res.send( req.params.vintage );
+  res.send( req.params.wine );
+  res.send( req.params.wine2 );
+});
+
+router.put( '/view/:vintage/:wine/:wine2', function( req, res ) {
+  res.send( req.params.vintage );
+  res.send( req.params.wine );
+  res.send( req.params.wine2 );
+});
+
+router.delete( '/view/:vintage/:wine/:wine2', function( req, res ) {
+  res.send( req.params.vintage );
+  res.send( req.params.wine );
+  res.send( req.params.wine2 );
+});
+'''
+
 License
 =======
 
