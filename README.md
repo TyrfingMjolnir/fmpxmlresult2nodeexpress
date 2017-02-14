@@ -9,11 +9,11 @@ Note that adding a layout name in the FMPXMLRESULT export; before translating us
 
 How to use this file in terminal
 ---
-xsltproc fmpxmlresult2nodeexpress.xslt YourTable.fmpxmlresult.xml > route/YourTable.js
-
 ```bash
 $ xsltproc fmpxmlresult2nodeexpress.xslt test.xml > ~/projectname/route/view.js
 ```
+
+For using this in FileMaker use Export as XML and point to the raw file on github for the XSLT
 
 test.xml
 ```xml
