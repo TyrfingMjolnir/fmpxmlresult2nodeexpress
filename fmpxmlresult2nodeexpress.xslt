@@ -10,21 +10,65 @@
   express = require( 'express' ),
   router  = express.Router();
 
-router.post( '/ </xsl:text><xsl:value-of select="$tableName" /><xsl:text>', function( req, res ) {
-  res.send( 'Hello World' );
-});
+router.post( '/</xsl:text><xsl:value-of select="$tableName" />
+<xsl:for-each select="fmp:METADATA/fmp:FIELD">
+  <xsl:text>/:</xsl:text>
+  <xsl:value-of select="@NAME"/>
+</xsl:for-each>
+<xsl:text>', function( req, res ) {
+</xsl:text>
+<xsl:for-each select="fmp:METADATA/fmp:FIELD">
+  <xsl:text>  res.send( req.params.</xsl:text>
+  <xsl:value-of select="@NAME"/>
+  <xsl:text> );
+</xsl:text>
+</xsl:for-each>
+<xsl:text>});
 
-router.get( '/</xsl:text><xsl:value-of select="$tableName" /> <xsl:text>', function( req, res ) {
-  res.send( 'Hello World' );
-});
+router.get( '/</xsl:text><xsl:value-of select="$tableName" />
+<xsl:for-each select="fmp:METADATA/fmp:FIELD">
+  <xsl:text>/:</xsl:text>
+  <xsl:value-of select="@NAME"/>
+</xsl:for-each>
+<xsl:text>', function( req, res ) {
+</xsl:text>
+<xsl:for-each select="fmp:METADATA/fmp:FIELD">
+  <xsl:text>  res.send( req.params.</xsl:text>
+  <xsl:value-of select="@NAME"/>
+  <xsl:text> );
+</xsl:text>
+</xsl:for-each>
+<xsl:text>});
 
-router.put( '/ </xsl:text><xsl:value-of select="$tableName" /><xsl:text>', function( req, res ) {
-  res.send( 'Hello World' );
-});
+router.put( '/</xsl:text><xsl:value-of select="$tableName" />
+<xsl:for-each select="fmp:METADATA/fmp:FIELD">
+  <xsl:text>/:</xsl:text>
+  <xsl:value-of select="@NAME"/>
+</xsl:for-each>
+<xsl:text>', function( req, res ) {
+</xsl:text>
+<xsl:for-each select="fmp:METADATA/fmp:FIELD">
+  <xsl:text>  res.send( req.params.</xsl:text>
+  <xsl:value-of select="@NAME"/>
+  <xsl:text> );
+</xsl:text>
+</xsl:for-each>
+<xsl:text>});
 
-router.delete( '/</xsl:text><xsl:value-of select="$tableName" /><xsl:text>', function( req, res ) {
-  res.send( 'Hello World' );
-});
+router.delete( '/</xsl:text><xsl:value-of select="$tableName" />
+<xsl:for-each select="fmp:METADATA/fmp:FIELD">
+  <xsl:text>/:</xsl:text>
+  <xsl:value-of select="@NAME"/>
+</xsl:for-each>
+<xsl:text>', function( req, res ) {
+</xsl:text>
+<xsl:for-each select="fmp:METADATA/fmp:FIELD">
+  <xsl:text>  res.send( req.params.</xsl:text>
+  <xsl:value-of select="@NAME"/>
+  <xsl:text> );
+</xsl:text>
+</xsl:for-each>
+<xsl:text>});
 
 </xsl:text>
   </xsl:template>
