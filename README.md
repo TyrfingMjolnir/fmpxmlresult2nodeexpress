@@ -13,7 +13,7 @@ How to use this file in terminal
 $ xsltproc fmpxmlresult2nodeexpress.xslt test.xml > ~/projectname/route/view.js
 ```
 
-For using this in FileMaker use Export as XML and point to the raw file on github for the "XSLT":"https://raw.githubusercontent.com/TyrfingMjolnir/fmpxmlresult2nodeexpress/master/fmpxmlresult2nodeexpress.xslt" 
+For using this in FileMaker use File -> Export Records use filetype XML and point to the raw file on github for the "XSLT":"https://raw.githubusercontent.com/TyrfingMjolnir/fmpxmlresult2nodeexpress/master/fmpxmlresult2nodeexpress.xslt" 
 
 test.xml
 ```xml
