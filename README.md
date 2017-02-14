@@ -12,9 +12,10 @@ How to use this file in terminal
 xsltproc fmpxmlresult2nodeexpress.xslt YourTable.fmpxmlresult.xml > route/YourTable.js
 
 ```bash
-$ xsltproc fmpxmlresult2nodeexpress.xslt test.xml
+$ xsltproc fmpxmlresult2nodeexpress.xslt test.xml > ~/projectname/route/view.js
 ```
 
+test.xml
 ```xml
 <?xml version="1.0" encoding="UTF-8"?>
 <FMPXMLRESULT xmlns="http://www.filemaker.com/fmpxmlresult">
@@ -42,7 +43,7 @@ $ xsltproc fmpxmlresult2nodeexpress.xslt test.xml
 </FMPXMLRESULT>
 ```
 
-/route/view.js
+~/projectname/route/view.js
 
 ```js
 const
