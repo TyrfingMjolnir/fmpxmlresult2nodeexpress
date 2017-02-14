@@ -15,6 +15,8 @@ $ xsltproc fmpxmlresult2nodeexpress.xslt test.xml > ~/projectname/route/view.js
 
 For using this in FileMaker use File -> Export Records use filetype XML and point to the raw file on github for the [XSLT](https://raw.githubusercontent.com/TyrfingMjolnir/fmpxmlresult2nodeexpress/master/fmpxmlresult2nodeexpress.xslt)
 
+Sample files
+---
 test.xml
 ```xml
 <?xml version="1.0" encoding="UTF-8"?>
