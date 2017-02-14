@@ -11,11 +11,11 @@ How to use this file in terminal
 ---
 xsltproc fmpxmlresult2nodeexpress.xslt YourTable.fmpxmlresult.xml > route/YourTable.js
 
-'''bash
+```bash
 $ xsltproc fmpxmlresult2nodeexpress.xslt ../fmpxmlresult2nodeexpress2/test.xml
-'''
+```
 
-'''js
+```js
 const
   express = require( 'express' ),
   router  = express.Router();
@@ -43,7 +43,7 @@ router.delete( '/view/:vintage/:wine/:wine2', function( req, res ) {
   res.send( req.params.wine );
   res.send( req.params.wine2 );
 });
-'''
+```
 
 License
 =======
