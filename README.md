@@ -70,7 +70,7 @@ router.get( '/view/:vintage/:wine/:wine2', function( req, res ) {
   res.send( req.params.wine2 );
 });
 
-// U pdate
+// U pdate or router.patch
 router.put( '/view/:vintage/:wine/:wine2', function( req, res ) {
   res.send( req.params.vintage );
   res.send( req.params.wine );
