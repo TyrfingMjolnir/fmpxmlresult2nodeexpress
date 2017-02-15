@@ -15,7 +15,7 @@ $ xsltproc fmpxmlresult2nodeexpress.xslt test.xml > ~/projectname/route/view.js
 
 For using this in FileMaker use File -> Export Records use filetype XML and point to the raw file on github for the [XSLT](https://raw.githubusercontent.com/TyrfingMjolnir/fmpxmlresult2nodeexpress/master/fmpxmlresult2nodeexpress.xslt)
 
-If you do not like the verbs used for the calls you can have a look [here](http://stackoverflow.com/questions/630453/put-vs-post-in-rest) to do some qualified changes. Perhaps using PATCH instead of UPDATE will do you better.
+If you do not like the verbs used for the calls you can have a look [here](http://stackoverflow.com/questions/630453/put-vs-post-in-rest) to do some qualified changes. Perhaps using patch instead of put for your UPDATE will be for the better?
 
 Sample files
 ---
