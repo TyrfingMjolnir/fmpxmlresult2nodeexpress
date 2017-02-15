@@ -82,6 +82,10 @@ router.delete( '/</xsl:text><xsl:value-of select="$tableName" />
     <xsl:value-of select="fmp:FMPXMLRESULT/fmp:DATABASE/@TIMEFORMAT" />
   </xsl:variable>
 </xsl:stylesheet>
+
+<xsl:text>
+
+module.exports = router;</xsl:text>
 <!--
 ========================================================================================
 Copyright (c) 2008 - Gjermund Gusland Thorsen, released under the MIT License.
