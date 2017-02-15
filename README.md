@@ -52,24 +52,30 @@ const
   express = require( 'express' ),
   router  = express.Router();
 
+// CRUD for the node named: view
+
+// C reate
 router.post( '/view/:vintage/:wine/:wine2', function( req, res ) {
   res.send( req.params.vintage );
   res.send( req.params.wine );
   res.send( req.params.wine2 );
 });
 
+// R ead
 router.get( '/view/:vintage/:wine/:wine2', function( req, res ) {
   res.send( req.params.vintage );
   res.send( req.params.wine );
   res.send( req.params.wine2 );
 });
 
+// U pdate
 router.put( '/view/:vintage/:wine/:wine2', function( req, res ) {
   res.send( req.params.vintage );
   res.send( req.params.wine );
   res.send( req.params.wine2 );
 });
 
+// D elete
 router.delete( '/view/:vintage/:wine/:wine2', function( req, res ) {
   res.send( req.params.vintage );
   res.send( req.params.wine );
