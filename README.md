@@ -25,7 +25,7 @@ test.xml
 <FMPXMLRESULT xmlns="http://www.filemaker.com/fmpxmlresult">
 <ERRORCODE>0</ERRORCODE>
 <PRODUCT BUILD="07-18-2011" NAME="FileMaker" VERSION="ProAdvanced 11.0v4"/>
-<DATABASE DATEFORMAT="D/m/yyyy" LAYOUT="view" NAME="schema.table" RECORDS="0" TIMEFORMAT="k:mm:ss "/>
+<DATABASE DATEFORMAT="D/m/yyyy" LAYOUT="view" NAME="schema.table" RECORDS="0" TIMEFORMAT="k:mm:ss"/>
 <METADATA>
   <FIELD EMPTYOK="YES" MAXREPEAT="1" NAME="vintage" TYPE="NUMBER"/>
   <FIELD EMPTYOK="YES" MAXREPEAT="1" NAME="wine" TYPE="TEXT"/>
