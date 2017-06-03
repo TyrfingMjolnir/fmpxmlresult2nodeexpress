@@ -16,7 +16,7 @@ router.post( '/:id', function( req, res ) {
   console.log(		</xsl:text><xsl:for-each select="fmp:METADATA/fmp:FIELD">
 			<xsl:text>"</xsl:text>
 			<xsl:value-of select="@NAME"/>
-			<xsl:text>"</xsl:text>
+			<xsl:text>",</xsl:text>
   </xsl:for-each><xsl:text>);
   res.send( 'You did a HTTP POST query' );
 });
