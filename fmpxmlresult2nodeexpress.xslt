@@ -10,31 +10,30 @@
 const
   express = require( 'express' ),
   router  = express.Router();
-
   
 // Create
-router.post( '/</xsl:text><xsl:value-of select="$tableName" /><xsl:text>', function( req, res ) {
-  res.send( 'You did n HTTP POST query' );
+router.post( '/:id', function( req, res ) {
+  res.send( 'You did a HTTP POST query' );
 });
 
 // Read
-router.get( '/</xsl:text><xsl:value-of select="$tableName" /> <xsl:text>', function( req, res ) {
-  res.send( 'You did n HTTP GET query' );
+router.get( '/:id', function( req, res ) {
+  res.send( 'You did a HTTP GET query' );
 });
 
 // Update overwrite record
-router.put( '/</xsl:text><xsl:value-of select="$tableName" /><xsl:text>', function( req, res ) {
-  res.send( 'You did n HTTP PUT query' );
+router.put( '/:id', function( req, res ) {
+  res.send( 'You did a HTTP PUT query' );
 });
 
 // Update overwrite a selection of fields in a record
-router.patch( '/</xsl:text><xsl:value-of select="$tableName" /><xsl:text>', function( req, res ) {
-  res.send( 'You did n HTTP PATCH query' );
+router.patch( '/:id', function( req, res ) {
+  res.send( 'You did a HTTP PATCH query' );
 });
 
 // Delete
-router.delete( '/</xsl:text><xsl:value-of select="$tableName" /><xsl:text>', function( req, res ) {
-  res.send( 'You did n HTTP DELETE query' );
+router.delete( '/:id', function( req, res ) {
+  res.send( 'You did a HTTP DELETE query' );
 });
 
 module.exports = router;
