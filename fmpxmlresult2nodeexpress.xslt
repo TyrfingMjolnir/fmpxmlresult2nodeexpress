@@ -26,7 +26,7 @@ router.put( '/ </xsl:text><xsl:value-of select="$tableName" /><xsl:text>', funct
   res.send( 'You did n HTTP PUT query' );
 });
 
-// Update overwrite a selection of fields
+// Update overwrite a selection of fields in a record
 router.patch( '/ </xsl:text><xsl:value-of select="$tableName" /><xsl:text>', function( req, res ) {
   res.send( 'You did n HTTP PATCH query' );
 });
