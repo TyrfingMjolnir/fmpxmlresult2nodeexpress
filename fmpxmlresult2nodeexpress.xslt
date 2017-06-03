@@ -36,6 +36,7 @@ router.delete( '/</xsl:text><xsl:value-of select="$tableName" /><xsl:text>', fun
   res.send( 'You did n HTTP DELETE query' );
 });
 
+module.exports = router;
     </xsl:text>
   </xsl:template>
   <xsl:variable name="databaseName">
