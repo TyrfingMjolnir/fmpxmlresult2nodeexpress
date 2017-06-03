@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!--
   Written by Gjermund G Thorsen 2017, all rights deserved
-  for the purpose of generating JSON route node from FMPXMLRESULT
+  for the purpose of generating NodeJS express route node from FMPXMLRESULT
 -->
 <xsl:stylesheet xmlns:xsl="http://www.w3.org/1999/XSL/Transform" xmlns:fmp="http://www.filemaker.com/fmpxmlresult" version="1.0">
 <xsl:output method="text" version="1.0" encoding="UTF-8" indent="no" />
