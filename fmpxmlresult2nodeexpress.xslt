@@ -36,8 +36,7 @@ router.delete( '/:id', function( req, res ) {
   res.send( 'You did a HTTP DELETE query' );
 });
 
-module.exports = router;
-    </xsl:text>
+module.exports = router;</xsl:text>
   </xsl:template>
   <xsl:variable name="databaseName">
     <xsl:value-of select="fmp:FMPXMLRESULT/fmp:DATABASE/@NAME" />
