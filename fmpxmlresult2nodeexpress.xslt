@@ -12,7 +12,7 @@
 
   
 // Create
-router.post( '/ </xsl:text><xsl:value-of select="$tableName" /><xsl:text>', function( req, res ) {
+router.post( '/</xsl:text><xsl:value-of select="$tableName" /><xsl:text>', function( req, res ) {
   res.send( 'You did n HTTP POST query' );
 });
 
