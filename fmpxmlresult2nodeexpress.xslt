@@ -10,20 +10,30 @@
   express = require( 'express' ),
   router  = express.Router();
 
+  
+// Create
 router.post( '/ </xsl:text><xsl:value-of select="$tableName" /><xsl:text>', function( req, res ) {
-  res.send( 'Hello World' );
+  res.send( 'You did n HTTP POST query' );
 });
 
+// Read
 router.get( '/</xsl:text><xsl:value-of select="$tableName" /> <xsl:text>', function( req, res ) {
-  res.send( 'Hello World' );
+  res.send( 'You did n HTTP GET query' );
 });
 
+// Update overwrite record
 router.put( '/ </xsl:text><xsl:value-of select="$tableName" /><xsl:text>', function( req, res ) {
-  res.send( 'Hello World' );
+  res.send( 'You did n HTTP PUT query' );
 });
 
+// Update overwrite a selection of fields
+router.patch( '/ </xsl:text><xsl:value-of select="$tableName" /><xsl:text>', function( req, res ) {
+  res.send( 'You did n HTTP PATCH query' );
+});
+
+// Delete
 router.delete( '/</xsl:text><xsl:value-of select="$tableName" /><xsl:text>', function( req, res ) {
-  res.send( 'Hello World' );
+  res.send( 'You did n HTTP DELETE query' );
 });
 
 </xsl:text>
