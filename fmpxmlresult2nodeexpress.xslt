@@ -6,7 +6,9 @@
 <xsl:stylesheet xmlns:xsl="http://www.w3.org/1999/XSL/Transform" xmlns:fmp="http://www.filemaker.com/fmpxmlresult" version="1.0">
 <xsl:output method="text" version="1.0" encoding="UTF-8" indent="no" />
 <xsl:template match="fmp:FMPXMLRESULT">
-  <xsl:text>// To be called from app.js like this: app.use('/</xsl:text><xsl:value-of select="$tableName" /><xsl:text>', require('./</xsl:text><xsl:value-of select="$tableName" /><xsl:text>'));    
+<xsl:text>// To be called from app.js like this: app.use( '/</xsl:text><xsl:value-of select="$tableName" /><xsl:text>', require( './</xsl:text><xsl:value-of select="$tableName" /><xsl:text>' ) );
+// or : app.use( '/</xsl:text><xsl:value-of select="$schemaTableName" /><xsl:text>', require( './</xsl:text><xsl:value-of select="$schemaTableName" /><xsl:text>' ) );
+// or : app.use( '/</xsl:text><xsl:value-of select="$databaseName" /><xsl:text>', require( './</xsl:text><xsl:value-of select="$databaseName" /><xsl:text>' ) );
 const
   express = require( 'express' ),
   router  = express.Router();
@@ -43,10 +45,14 @@ router.delete( '/:id', function( req, res ) {
 
 module.exports = router;
 </xsl:text>
-	</xsl:template>
-	<xsl:template match="fmp:METADATA/fmp:FIELD">
+</xsl:template>
+<xsl:template match="fmp:METADATA/fmp:FIELD">
 <xsl:text>"</xsl:text><xsl:value-of select="@NAME"/><xsl:text>",</xsl:text></xsl:template>
-  <xsl:variable name="databaseName">
+  <xsl:variable name="schemaTableName">
+    <xsl:value-of select="fmp:FMPXMLRESULT/fmp:DATABASE/@NAME" />
+    <xsl:text>.</xsl:text>
+  <xsl:value-of select="fmp:FMPXMLRESULT/fmp:DATABASE/@LAYOUT" />
+  </xsl:variable>  <xsl:variable name="databaseName">
     <xsl:value-of select="fmp:FMPXMLRESULT/fmp:DATABASE/@NAME" />
   </xsl:variable>
   <xsl:variable name="tableName">
