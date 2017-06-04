@@ -8,35 +8,36 @@
 <xsl:template match="fmp:FMPXMLRESULT">
   <xsl:text>// To be called from app.js like this: app.use('/</xsl:text><xsl:value-of select="$tableName" /><xsl:text>', require('./</xsl:text><xsl:value-of select="$tableName" /><xsl:text>'));    
 const
-  express = require( 'express' ),
-  router  = express.Router();
+  express    = require( 'express' ),
+  routernode = express.Router();
   
 // Create
-router.post( '</xsl:text><xsl:apply-templates select="fmp:METADATA/fmp:FIELD"/><xsl:text>', function( req, res ) {
+routernode.post( '</xsl:text><xsl:apply-templates select="fmp:METADATA/fmp:FIELD"/><xsl:text>', function( req, res ) {
   res.send( 'You did a HTTP POST query' );
 });
 
 // Read
-router.get( '</xsl:text><xsl:apply-templates select="fmp:METADATA/fmp:FIELD"/><xsl:text>', function( req, res ) {
+routernode.get( '</xsl:text><xsl:apply-templates select="fmp:METADATA/fmp:FIELD"/><xsl:text>', function( req, res ) {
   res.send( 'You did a HTTP GET query' );
 });
 
 // Update overwrite record
-router.put( '</xsl:text><xsl:apply-templates select="fmp:METADATA/fmp:FIELD"/><xsl:text>', function( req, res ) {
+routernode.put( '</xsl:text><xsl:apply-templates select="fmp:METADATA/fmp:FIELD"/><xsl:text>', function( req, res ) {
   res.send( 'You did a HTTP PUT query' );
 });
 
 // Update overwrite a selection of fields in a record
-router.patch( '</xsl:text><xsl:apply-templates select="fmp:METADATA/fmp:FIELD"/><xsl:text>', function( req, res ) {
+routernode.patch( '</xsl:text><xsl:apply-templates select="fmp:METADATA/fmp:FIELD"/><xsl:text>', function( req, res ) {
   res.send( 'You did a HTTP PATCH query' );
 });
 
 // Delete
-router.delete( '</xsl:text><xsl:apply-templates select="fmp:METADATA/fmp:FIELD"/><xsl:text>', function( req, res ) {
+routernode.delete( '</xsl:text><xsl:apply-templates select="fmp:METADATA/fmp:FIELD"/><xsl:text>', function( req, res ) {
   res.send( 'You did a HTTP DELETE query' );
 });
 
-module.exports = router;</xsl:text>
+module.exports = routernode;
+</xsl:text>
 	</xsl:template>
 	<xsl:template match="fmp:METADATA/fmp:FIELD"><xsl:text>/:</xsl:text><xsl:value-of select="@NAME"/></xsl:template>
   <xsl:variable name="databaseName">
