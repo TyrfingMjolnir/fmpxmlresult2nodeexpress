@@ -7,8 +7,8 @@
 <xsl:output method="text" version="1.0" encoding="UTF-8" indent="no" />
 <xsl:template match="fmp:FMPXMLRESULT">
   <xsl:text>// To be called from app.js like this: app.use('/</xsl:text><xsl:value-of select="$tableName" /><xsl:text>', require('./</xsl:text><xsl:value-of select="$tableName" /><xsl:text>'));
-// To be called from app.js like this: app.use('/</xsl:text><xsl:value-of select="$databaseName$tableName" /><xsl:text>', require('./</xsl:text><xsl:value-of select="$databaseName$tableName" /><xsl:text>'));
-// To be called from app.js like this: app.use('/</xsl:text><xsl:value-of select="$databaseName" /><xsl:text>', require('./</xsl:text><xsl:value-of select="$databaseName" /><xsl:text>'));
+// or like this: app.use('/</xsl:text><xsl:value-of select="$databaseName$tableName" /><xsl:text>', require('./</xsl:text><xsl:value-of select="$databaseName$tableName" /><xsl:text>'));
+// or like this: app.use('/</xsl:text><xsl:value-of select="$databaseName" /><xsl:text>', require('./</xsl:text><xsl:value-of select="$databaseName" /><xsl:text>'));
 
 const
   express    = require( 'express' ),
