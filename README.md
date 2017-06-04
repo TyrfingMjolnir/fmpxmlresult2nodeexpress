@@ -21,69 +21,82 @@ Sample files
 ---
 test.xml
 ```xml
-<?xml version="1.0" encoding="UTF-8"?>
+<?xml version="1.0" encoding="utf-8"?>
 <FMPXMLRESULT xmlns="http://www.filemaker.com/fmpxmlresult">
-<ERRORCODE>0</ERRORCODE>
-<PRODUCT BUILD="07-18-2011" NAME="FileMaker" VERSION="ProAdvanced 11.0v4"/>
-<DATABASE DATEFORMAT="D/m/yyyy" LAYOUT="view" NAME="schema.table" RECORDS="0" TIMEFORMAT="k:mm:ss"/>
-<METADATA>
-  <FIELD EMPTYOK="YES" MAXREPEAT="1" NAME="vintage" TYPE="NUMBER"/>
-  <FIELD EMPTYOK="YES" MAXREPEAT="1" NAME="wine" TYPE="TEXT"/>
-  <FIELD EMPTYOK="YES" MAXREPEAT="1" NAME="wine2" TYPE="TEXT"/>
-</METADATA>
-<RESULTSET FOUND="0">
-  <ROW MODID="0" RECORDID="0">
-    <COL>
-      <DATA>2008</DATA>
-    </COL>
-    <COL>
-      <DATA>Sjattonoeff</DATA>
-    </COL>
-    <COL>
-      <DATA>Sjattonoeff</DATA>
-    </COL>
-  </ROW>
-</RESULTSET>
+  <ERRORCODE>0</ERRORCODE>
+  <PRODUCT BUILD="03-22-2017" NAME="FileMaker" VERSION="ProAdvanced 16.0.1" />
+  <DATABASE DATEFORMAT="M/d/yyyy" LAYOUT="contact" NAME="Untitled.fmp12" RECORDS="1" TIMEFORMAT="h:mm:ss a" />
+  <METADATA>
+    <FIELD EMPTYOK="YES" MAXREPEAT="1" NAME="contactActive" TYPE="NUMBER" />
+    <FIELD EMPTYOK="YES" MAXREPEAT="1" NAME="contactCountry" TYPE="TEXT" />
+    <FIELD EMPTYOK="YES" MAXREPEAT="1" NAME="contactEpost" TYPE="TEXT" />
+    <FIELD EMPTYOK="YES" MAXREPEAT="1" NAME="contactID" TYPE="NUMBER" />
+    <FIELD EMPTYOK="YES" MAXREPEAT="1" NAME="contactName" TYPE="TEXT" />
+    <FIELD EMPTYOK="YES" MAXREPEAT="1" NAME="contactTown" TYPE="TEXT" />
+    <FIELD EMPTYOK="YES" MAXREPEAT="1" NAME="contactZIP" TYPE="TEXT" />
+  </METADATA>
+  <RESULTSET FOUND="1">
+    <ROW MODID="0" RECORDID="1">
+      <COL>
+        <DATA>1</DATA>
+      </COL>
+      <COL>
+        <DATA>contactCountry</DATA>
+      </COL>
+      <COL>
+        <DATA>contactEpost</DATA>
+      </COL>
+      <COL>
+        <DATA>contactID</DATA>
+      </COL>
+      <COL>
+        <DATA>contactName</DATA>
+      </COL>
+      <COL>
+        <DATA>contactTown</DATA>
+      </COL>
+      <COL>
+        <DATA>contactZIP</DATA>
+      </COL>
+    </ROW>
+  </RESULTSET>
 </FMPXMLRESULT>
 ```
 
-~/projectname/route/view.js
+~/projectname/route/contact.js
 
 ```js
+// To be called from app.js like this: app.use('/contact', require('./contact'));
 const
   express = require( 'express' ),
   router  = express.Router();
 
-// CRUD for the node named: view
-
-// C reate
-router.post( '/view/:vintage/:wine/:wine2', function( req, res ) {
-  res.send( req.params.vintage );
-  res.send( req.params.wine );
-  res.send( req.params.wine2 );
+// Create
+router.post( '/:contactActive/:contactCountry/:contactEpost/:contactID/:contactName/:contactTown/:contactZIP', function( req, res ) {
+  res.send( 'You did a HTTP POST query' );
 });
 
-// R ead
-router.get( '/view/:vintage/:wine/:wine2', function( req, res ) {
-  res.send( req.params.vintage );
-  res.send( req.params.wine );
-  res.send( req.params.wine2 );
+// Read
+router.get( '/:contactActive/:contactCountry/:contactEpost/:contactID/:contactName/:contactTown/:contactZIP', function( req, res ) {
+  res.send( 'You did a HTTP GET query' );
 });
 
-// U pdate
-//router.patch( '/view/:vintage/:wine/:wine2', function( req, res ) {
-router.put( '/view/:vintage/:wine/:wine2', function( req, res ) {
-  res.send( req.params.vintage );
-  res.send( req.params.wine );
-  res.send( req.params.wine2 );
+// Update overwrite record
+router.put( '/:contactActive/:contactCountry/:contactEpost/:contactID/:contactName/:contactTown/:contactZIP', function( req, res ) {
+  res.send( 'You did a HTTP PUT query' );
 });
 
-// D elete
-router.delete( '/view/:vintage/:wine/:wine2', function( req, res ) {
-  res.send( req.params.vintage );
-  res.send( req.params.wine );
-  res.send( req.params.wine2 );
+// Update overwrite a selection of fields in a record
+router.patch( '/:contactActive/:contactCountry/:contactEpost/:contactID/:contactName/:contactTown/:contactZIP', function( req, res ) {
+  res.send( 'You did a HTTP PATCH query' );
 });
+
+// Delete
+router.delete( '/:contactActive/:contactCountry/:contactEpost/:contactID/:contactName/:contactTown/:contactZIP', function( req, res ) {
+  res.send( 'You did a HTTP DELETE query' );
+});
+
+module.exports = router;
 ```
 
 License
