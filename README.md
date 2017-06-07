@@ -69,34 +69,34 @@ test.xml
 // To be called from app.js like this: app.use('/contact', require('./contact'));
 const
   express = require( 'express' ),
-  router  = express.Router();
+  routernode  = express.Router();
 
 // Create
-router.post( '/:contactActive/:contactCountry/:contactEpost/:contactID/:contactName/:contactTown/:contactZIP', function( req, res ) {
+routernode.post( '/:contactActive/:contactCountry/:contactEpost/:contactID/:contactName/:contactTown/:contactZIP', function( req, res ) {
   res.send( 'You did a HTTP POST query' );
 });
 
 // Read
-router.get( '/:contactActive/:contactCountry/:contactEpost/:contactID/:contactName/:contactTown/:contactZIP', function( req, res ) {
+routernode.get( '/:contactActive/:contactCountry/:contactEpost/:contactID/:contactName/:contactTown/:contactZIP', function( req, res ) {
   res.send( 'You did a HTTP GET query' );
 });
 
 // Update overwrite record
-router.put( '/:contactActive/:contactCountry/:contactEpost/:contactID/:contactName/:contactTown/:contactZIP', function( req, res ) {
+routernode.put( '/:contactActive/:contactCountry/:contactEpost/:contactID/:contactName/:contactTown/:contactZIP', function( req, res ) {
   res.send( 'You did a HTTP PUT query' );
 });
 
 // Update overwrite a selection of fields in a record
-router.patch( '/:contactActive/:contactCountry/:contactEpost/:contactID/:contactName/:contactTown/:contactZIP', function( req, res ) {
+routernode.patch( '/:contactActive/:contactCountry/:contactEpost/:contactID/:contactName/:contactTown/:contactZIP', function( req, res ) {
   res.send( 'You did a HTTP PATCH query' );
 });
 
 // Delete
-router.delete( '/:contactActive/:contactCountry/:contactEpost/:contactID/:contactName/:contactTown/:contactZIP', function( req, res ) {
+routernode.delete( '/:contactActive/:contactCountry/:contactEpost/:contactID/:contactName/:contactTown/:contactZIP', function( req, res ) {
   res.send( 'You did a HTTP DELETE query' );
 });
 
-module.exports = router;
+module.exports = routernode;
 ```
 
 License
