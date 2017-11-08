@@ -101,7 +101,7 @@ module.exports = routernode;
 
 # fmpxmlresult2nodeexpressFullCRUD.xslt
 
-This file loads every field/column as a potential parameter in the template, there's most likely no purpose to use all fields as parameters, however it must be easier to delete those you do not need than to risk a typo. After all removing the source of human failure is the main goal of these scripts.
+This file loads every field/column as a potential parameter in the template, there's most likely no purpose to use all fields as parameters, however it must be easier to delete those you do not need than to risk a typo. After all removing the source of human failure in the naming and typo department is the main goal of these scripts.
 
 License
 =======
