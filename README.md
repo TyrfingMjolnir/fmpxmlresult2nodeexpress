@@ -99,6 +99,10 @@ routernode.delete( '/:contactActive/:contactCountry/:contactEpost/:contactID/:co
 module.exports = routernode;
 ```
 
+# fmpxmlresult2nodeexpressFullCRUD.xslt
+
+This file loads every field/column as a potential parameter in the template, it's probably not intentional to use all fields as parameters, however it's easier to delete those you do not need than to risk a typo.
+
 License
 =======
 
