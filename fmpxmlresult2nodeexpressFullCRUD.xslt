@@ -27,7 +27,7 @@ routernode.route( `/` )
 routernode.route( `</xsl:text><xsl:apply-templates select="fmp:METADATA/fmp:FIELD"/><xsl:text>` )
   // Read resource
   .get( ( req, res ) => {
-    res.status( 200 ).send( `Get the resource ${req.params.id} </xsl:text><xsl:apply-templates select="fmp:METADATA/fmp:FIELD"/><xsl:text>` );
+    res.status( 200 ).send( `Get the resource ${req.params.id}` );
   } )
   // Update resource
   .patch( ( req, res ) => {
