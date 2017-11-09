@@ -17,11 +17,11 @@ const
 routernode.route( `/` )
   // Create resource
   .post( ( req, res ) => {
-    res.status( 200 ).send( `Add a book using body </xsl:text><xsl:apply-templates select="fmp:METADATA/fmp:FIELD"/><xsl:text>` );
+    res.status( 200 ).send( `Add a book using body` );
   } )
   // Read resource at random
   .get( ( req, res ) => {
-    res.status( 200 ).send( `Get a resource at random </xsl:text><xsl:apply-templates select="fmp:METADATA/fmp:FIELD"/><xsl:text>` );
+    res.status( 200 ).send( `Get a resource at random` );
   } );
 
 routernode.route( `</xsl:text><xsl:apply-templates select="fmp:METADATA/fmp:FIELD"/><xsl:text>` )
@@ -31,16 +31,16 @@ routernode.route( `</xsl:text><xsl:apply-templates select="fmp:METADATA/fmp:FIEL
   } )
   // Update resource
   .patch( ( req, res ) => {
-    res.status( 200 ).send( `Update the resource ${req.params.id} using body for updates </xsl:text><xsl:apply-templates select="fmp:METADATA/fmp:FIELD"/><xsl:text>` );
+    res.status( 200 ).send( `Update the resource ${req.params.id} using body for updates` );
   } )
   // Update replacing resource
   .put( ( req, res ) => {
-    res.status( 200 ).send( `Replace the resource ${req.params.id} use body for replacement </xsl:text><xsl:apply-templates select="fmp:METADATA/fmp:FIELD"/><xsl:text>` );
+    res.status( 200 ).send( `Replace the resource ${req.params.id} use body for replacement` );
   } )
   // Delete resource
   // Typically implemented as an update mark for deletion.
   .delete( ( req, res ) => {
-    res.status( 200 ).send( `Delete the resource ${req.params.id} </xsl:text><xsl:apply-templates select="fmp:METADATA/fmp:FIELD"/><xsl:text>` );
+    res.status( 200 ).send( `Delete the resource ${req.params.id}` );
   } );
 
 module.exports = routernode;
