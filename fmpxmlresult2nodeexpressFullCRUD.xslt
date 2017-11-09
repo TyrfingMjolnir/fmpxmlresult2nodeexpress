@@ -24,6 +24,7 @@ routernode.route( `/` )
     res.status( 200 ).send( `Get a resource at random` );
   } );
 
+// below is a redonkulous long list of field names; namely all of them for the table in question, please reduce to only include the one you actually need.
 routernode.route( `</xsl:text><xsl:apply-templates select="fmp:METADATA/fmp:FIELD"/><xsl:text>` )
   // Read resource
   .get( ( req, res ) => {
