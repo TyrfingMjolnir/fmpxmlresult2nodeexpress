@@ -81,12 +81,12 @@ routernode.get( '/:contactActive/:contactCountry/:contactEpost/:contactID/:conta
   res.send( 'You did a HTTP GET query' );
 });
 
-// Update overwrite record
+// Update replacing a resource in full at given key / a record
 routernode.put( '/:contactActive/:contactCountry/:contactEpost/:contactID/:contactName/:contactTown/:contactZIP', function( req, res ) {
   res.send( 'You did a HTTP PUT query' );
 });
 
-// Update overwrite a selection of fields in a record
+// Update a selection of details / fields in at given key / a record
 routernode.patch( '/:contactActive/:contactCountry/:contactEpost/:contactID/:contactName/:contactTown/:contactZIP', function( req, res ) {
   res.send( 'You did a HTTP PATCH query' );
 });
