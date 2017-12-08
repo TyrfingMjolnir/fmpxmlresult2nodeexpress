@@ -103,6 +103,10 @@ module.exports = routernode;
 
 This file loads every field/column as a potential parameter in the template, there's most likely no purpose to use all fields as parameters, however it must be easier to delete those you do not need than to risk a typo. After all removing the source of human failure in the naming and typo department is the main goal of these scripts.
 
+# CRUD is often confusing
+
+as CRUD only includes 4 letters; here is a good read on the difference between the 2 Us in CRUD; namely PATCH and PUT: https://stackoverflow.com/questions/28459418/rest-api-put-vs-patch-with-real-life-examples#34400076
+
 License
 =======
 
