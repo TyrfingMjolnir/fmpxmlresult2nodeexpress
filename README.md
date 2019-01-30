@@ -73,27 +73,27 @@ const
 
 // Create
 routernode.post( '/:contactActive/:contactCountry/:contactEpost/:contactID/:contactName/:contactTown/:contactZIP', function( req, res ) {
-  res.send( 'You did a HTTP POST query' );
+  res.send( 'You did a HTTP POST query / Create' );
 });
 
 // Read
 routernode.get( '/:contactActive/:contactCountry/:contactEpost/:contactID/:contactName/:contactTown/:contactZIP', function( req, res ) {
-  res.send( 'You did a HTTP GET query' );
+  res.send( 'You did a HTTP GET query / Read' );
 });
 
 // Update replacing a resource in full at given key / a record
 routernode.put( '/:contactActive/:contactCountry/:contactEpost/:contactID/:contactName/:contactTown/:contactZIP', function( req, res ) {
-  res.send( 'You did a HTTP PUT query' );
+  res.send( 'You did a HTTP PUT query / Overwrite' );
 });
 
 // Update a selection of details / fields in at given key / a record
 routernode.patch( '/:contactActive/:contactCountry/:contactEpost/:contactID/:contactName/:contactTown/:contactZIP', function( req, res ) {
-  res.send( 'You did a HTTP PATCH query' );
+  res.send( 'You did a HTTP PATCH query / Update' );
 });
 
 // Delete
 routernode.delete( '/:contactActive/:contactCountry/:contactEpost/:contactID/:contactName/:contactTown/:contactZIP', function( req, res ) {
-  res.send( 'You did a HTTP DELETE query' );
+  res.send( 'You did a HTTP DELETE query / Delete' );
 });
 
 module.exports = routernode;
